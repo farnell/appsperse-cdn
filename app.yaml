@@ -1,0 +1,19 @@
+application: appsperse-cdn
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+- url: /downloads
+  static_dir: downloads
+- url: /images
+  static_dir: images
+- url: /html
+  static_dir: html
+
+
+- url: .*
+  script: main.py
